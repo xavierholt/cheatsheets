@@ -75,6 +75,14 @@ code {
   padding: 0 2pt;
 }
 
+span.key {
+  background-color: #eee;
+  border-radius: 2pt;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  padding: 0 4pt;
+}
+
 tbody.counter tr:not(.header) {
     counter-increment: index;
 }
