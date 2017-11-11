@@ -1,0 +1,98 @@
+h1 {
+  font-family: monospace;
+  font-size: 300%;
+  text-align: center;
+  text-decoration: underline;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 6in;
+}
+
+ul {
+  margin-left: auto;
+  margin-right: auto;
+  width: 4in;
+}
+
+table {
+  border-spacing: 0;
+  border-radius: 1em;
+  margin: 1em auto;
+  min-width: 9in;
+}
+
+tbody::after
+{
+  content: '';
+  display: block;
+  height: 1em;
+
+}
+
+th {
+  background-color: #ccc;
+  font-family: monospace;
+  font-size: 120%;
+  padding: 2pt 4em;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 1pt 1em;
+}
+
+tr td:first-child {
+  border-left: 1px solid #ccc;
+}
+
+tr td:last-child {
+  border-right: 1px solid #ccc;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 1em;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 1em;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 1em;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 1em;
+}
+
+code {
+  background-color: #eee;
+  padding: 0 2pt;
+}
+
+tbody.counter tr:not(.header) {
+    counter-increment: index;
+}
+
+tbody.counter td:first-child::before {
+    content: counter(index);
+    text-align: right;
+    display: inline-block;
+    margin-right: 1em;
+    min-width: 2em;
+}
+
+@media print {
+  body#cheatsheet h1 {
+    display: none;
+  }
+
+  tr:first-child th {
+    border: 1px solid #ccc;
+  }
+}
