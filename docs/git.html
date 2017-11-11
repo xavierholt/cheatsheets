@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Git Cheatsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="cheatsheet">
+    <h1>Git Cheatsheet</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="2">Creating a Repo</th>
+        </tr>
+        <tr>
+          <td><code>git clone [url]</code></td>
+          <td>Clone the Git repo at <code>url</code> into a new directory.</td>
+        </tr>
+        <tr>
+          <td><code>git clone [url] [dir]</code></td>
+          <td>Clone the Git repo at <code>url</code> into a new directory called <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git init</code></td>
+          <td>Initialize your current directory as a new Git repo.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Working with Remotes</th>
+        </tr>
+        <tr>
+          <td><code>git remote</code></td>
+          <td>Show your current remote.</td>
+        </tr>
+        <tr>
+          <td><code>git remote -v</code></td>
+          <td>List all your remotes.</td>
+        </tr>
+        <tr>
+          <td><code>git remote add [name] [url]</code></td>
+          <td>Add a new remote called <code>name</code> pointing to <code>url</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git remote set-url [name] [newurl]</code></td>
+          <td>Update the remote called <code>name</code> to point to <code>newurl</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git remote rename [oldname] [newname]</code></td>
+          <td>Rename the remote called <code>oldname</code> to <code>newname</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git remote remove [name]</code></td>
+          <td>Remove the remote called <code>name</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Working with Branches</th>
+        </tr>
+        <tr>
+          <td><code>git branch</code></td>
+          <td>Show your current branch (and all your other branches).</td>
+        </tr>
+        <tr>
+          <td><code>git branch [name]</code></td>
+          <td>Create a new branch called <code>name</code> off of your current branch.</td>
+        </tr>
+        <tr>
+          <td><code>git checkout [name]</code></td>
+          <td>Switch your current branch to <code>name</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git checkout -b [name]</code></td>
+          <td>Create and switch to a new branch called <code>name</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git branch -d [name]</code></td>
+          <td>Delete the branch called <code>name</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Making Changes</th>
+        </tr>
+        <tr>
+          <td><code>git status</code></td>
+          <td>Show a summary of your local changes.</td>
+        </tr>
+        <tr>
+          <td><code>git diff</code></td>
+          <td>Show the details of your local changes.</td>
+        </tr>
+        <tr>
+          <td><code>git diff [path]</code></td>
+          <td>Show the details of your local changes to <code>path</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git checkout -- [path]</code></td>
+          <td>Discard your local changes to <code>path</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git add [path]</code></td>
+          <td>Stage your local changes to <code>path</code> so they're ready to commit.</td>
+        </tr>
+        <tr>
+          <td><code>git reset HEAD [path]</code></td>
+          <td>Untage your changes to <code>path</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git commit -m "[message]"</code></td>
+          <td>Commit your staged changes with the message <code>message</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Syncing your Changes</th>
+        </tr>
+        <tr>
+          <td><code>git pull</code></td>
+          <td>Pull any changes to your current branch from your current remote.</td>
+        </tr>
+        <tr>
+          <td><code>git pull [remote] [branch]</code></td>
+          <td>Merge commits from <code>branch</code> on <code>remote</code> into your current branch.</td>
+        </tr>
+        <tr>
+          <td><code>git push</code></td>
+          <td>Push your local commits to your current branch on your current remote.</td>
+        </tr>
+        <tr>
+          <td><code>git fetch</code></td>
+          <td>Pull down a list of branches from your current remote.</td>
+        </tr>
+        <tr>
+          <td><code>git fetch [remote]</code></td>
+          <td>Pull down a list of branches from <code>remote</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git fetch --all</code></td>
+          <td>Pull down a list of branches from all remotes.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Miscellaneous Commands</th>
+        </tr>
+        <tr>
+          <td><code>git help</code></td>
+          <td>Show the Git manual.</td>
+        </tr>
+        <tr>
+          <td><code>git help [command]</code></td>
+          <td>Show the Git manual for <code>command</code>.</td>
+        </tr>
+        <tr>
+          <td><code>git stash</code></td>
+          <td>Temporarily hide your uncommitted local changes.</td>
+        </tr>
+        <tr>
+          <td><code>git stash pop</code></td>
+          <td>Replay your stashed changes on top of your current files.</td>
+        </tr>
+        <tr>
+          <td><code>git log</code></td>
+          <td>Show the Git commit log.</td>
+        </tr>
+        <tr>
+          <td><code>git log --oneline --graph</code></td>
+          <td>Just try it. It's beautiful.</td>
+        </tr>
+      </tbody>
+
+      <tbody class="counter">
+        <tr class="header">
+          <th colspan="2">A Typical Workflow</th>
+        </tr>
+        <tr>
+          <td>Fork a repo on Github.</td>
+          <td>This gives you a place to keep your changes.</td>
+        </tr>
+        <tr>
+          <td><code>git clone [url]</code></td>
+          <td>Clone the repo to your local machine.</td>
+        </tr>
+        <tr>
+          <td><code>cd [myrepo]</code></td>
+          <td>Change directory into the repo you just cloned.</td>
+        </tr>
+        <tr>
+          <td><code>git remote add upstream [url]</code></td>
+          <td>Add a remote for the repo you forked.</td>
+        </tr>
+        <tr>
+          <td><code>git checkout master</code></td>
+          <td>Make sure you're starting form the master branch.</td>
+        </tr>
+        <tr>
+          <td><code>git checkout -b mybranch</code></td>
+          <td>Create and switch to a new branch for your feature.</td>
+        </tr>
+        <tr>
+          <td>Edit stuff locally.</td>
+          <td>Since you're on a branch, you won't mess anyone else up.</td>
+        </tr>
+        <tr>
+          <td><code>git status</code></td>
+          <td>See what files you changed.  Make sure they're all things you want to commit.</td>
+        </tr>
+        <tr>
+          <td><code>git diff [file]</code></td>
+          <td>Check your individual changes if you're not sure they're all good.</td>
+        </tr>
+        <tr>
+          <td><code>git add [file1] [file2] [...]</code></td>
+          <td>Stage all the files you want to commit.</td>
+        </tr>
+        <tr>
+          <td><code>git status</code></td>
+          <td>Make sure you've staged all the files you want and none of the files you don't.</td>
+        </tr>
+        <tr>
+          <td><code>git commit -m "[message]"</code></td>
+          <td>Commit your staged files. Use a <code>message</code> so people can tell what you did.</td>
+        </tr>
+        <tr>
+          <td><code>git push</code></td>
+          <td>Push your changes to your remote.</td>
+        </tr>
+        <tr>
+          <td>Repeat.</td>
+          <td>Commit early and often. Repeat 7-13 until you're happy with your feature.</td>
+        </tr>
+        <tr>
+          <td>Make a PR on Github.</td>
+          <td>This tells your upstream that you'd like to get your feature merged in.</td>
+        </tr>
+        <tr>
+          <td>Deal with feedback.</td>
+          <td>They'll want changes. Repeat 7-13 until <i>they're</i> happy with your feature.</td>
+        </tr>
+        <tr>
+          <td>Your PR gets merged!</td>
+          <td>Your code is now part of the upstream project!</td>
+        </tr>
+        <tr>
+          <td><code>git checkout master</code></td>
+          <td>Go back to your master branch.</td>
+        </tr>
+        <tr>
+          <td><code>git pull upstream master</code></td>
+          <td>Update your master branch with the upstream changes.</td>
+        </tr>
+        <tr>
+          <td><code>git push</code></td>
+          <td>Push these new changes to your remote.</td>
+        </tr>
+        <tr>
+          <td><code>git branch -d mybranch</code></td>
+          <td>No need to keep your feature branch around any more.</td>
+        </tr>
+        <tr>
+          <td>Repeat!</td>
+          <td>Time for a new feature! Go to step 5 and start again.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bash Cheatsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="cheatsheet">
+    <h1>Bash Cheatsheet</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="2">Looking Around</th>
+        </tr>
+        <tr>
+          <td><code>pwd</code></td>
+          <td>Print the full path to your current directory.</td>
+        </tr>
+        <tr>
+          <td><code>ls</code></td>
+          <td>List the non-hidden files in your current directory.</td>
+        </tr>
+        <tr>
+          <td><code>ls [dir]</code></td>
+          <td>List the non-hidden files in <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>ls -al [dir]</code></td>
+          <td>List <code>-a</code> all files in <code>dir</code> in <code>-l</code> long format.</td>
+        </tr>
+        <tr>
+          <td><code>tree</code></td>
+          <td>Show a directory tree rooted in your current directory.</td>
+        </tr>
+        <tr>
+          <td><code>tree [dir]</code></td>
+          <td>Show a directory tree rooted at <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>cd [dir]</code></td>
+          <td>Change your current directory to <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>cd ..</code></td>
+          <td>Go up one level in the directory tree.</td>
+        </tr>
+        <tr>
+          <td><code>cd -</code></td>
+          <td>Change your current directory to your previous directory.</td>
+        </tr>
+        <tr>
+          <td><code>cd</code></td>
+          <td>Go to your home directory.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Working with Files</th>
+        </tr>
+        <tr>
+          <td><code>cat [file]</code></td>
+          <td>Print <code>file</code> to the console.</td>
+        </tr>
+        <tr>
+          <td><code>cat -n [file]</code></td>
+          <td>Print <code>file</code> to the console with <code>-n</code> line numbers.</td>
+        </tr>
+        <tr>
+          <td><code>less [file]</code></td>
+          <td>Show <code>file</code> in a viewer you can scroll.</td>
+        </tr>
+        <tr>
+          <td><code>vim [file]</code></td>
+          <td>Edit <code>file</code> in Vim.</td>
+        </tr>
+        <tr>
+          <td><code>emacs [file]</code></td>
+          <td>Edit <code>file</code> in Emacs.</td>
+        </tr>
+        <tr>
+          <td><code>mkdir [newdir]</code></td>
+          <td>Make a new directory called <code>newdir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>cp [file] [newfile]</code></td>
+          <td>Copy <code>file</code> to <code>newfile</code>.</td>
+        </tr>
+        <tr>
+          <td><code>cp [file1] [file2] [...] [dir]</code></td>
+          <td>Copy a bunch of files to <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>cp -r [dir] [newdir]</code></td>
+          <td>Copy <code>dir</code> and all its contents to <code>newdir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>mv [oldname] [newname]</code></td>
+          <td>Move / rename <code>oldname</code> to <code>newname</code>.</td>
+        </tr>
+        <tr>
+          <td><code>mv [file1] [file2] [...] [dir]</code></td>
+          <td>Move a bunch of files to <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>rm [file]</code></td>
+          <td>Delete <code>file</code>.</td>
+        </tr>
+        <tr>
+          <td><code>rmdir [dir]</code></td>
+          <td>Delete the empty directory <code>dir</code>.</td>
+        </tr>
+        <tr>
+          <td><code>rm -r [dir]</code></td>
+          <td>Delete <code>dir</code> and everyting in it.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Useful Commands</th>
+        </tr>
+        <tr>
+          <td><code>man [command]</code></td>
+          <td>Show the manual page for <code>command</code>.</td>
+        </tr>
+        <tr>
+          <td><code>echo [command]</code></td>
+          <td>Show what <code>command</code> expands to without actually running it.</td>
+        </tr>
+        <tr>
+          <td><code>find . -name "*.js"</code></td>
+          <td>Find all files anywhere in your current directory wth names ending in <code>.js</code>.</td>
+        </tr>
+        <tr>
+          <td><code>grep -ne "[pattern]" [file]</code></td>
+          <td>Find lines matching <code>pattern</code> in <code>file</code> (and their <code>-n</code> line numbers).</td>
+        </tr>
+        <tr>
+          <td><code>grep . -Irne "[pattern]"</code></td>
+          <td>Find lines matching <code>pattern</code> in <code>-r</code> all <code>-I</code> non-binary files in this directory.</td>
+        </tr>
+        <tr>
+          <td><code>wc [option] [file]</code></td>
+          <td>Count <code>-w</code> words, <code>-l</code> lines, <code>-c</code> bytes, or <code>-m</code> multibyte characters in <code>file</code>.</td>
+        </tr>
+        <tr>
+          <td><code>which [command]</code></td>
+          <td>Show the full path to <code>command</code>.</td>
+        </tr>
+        <tr>
+          <td><code>chmod +x [file]</code></td>
+          <td>Mark <code>file</code> as executable.</td>
+        </tr>
+        <tr>
+          <td><code>chown [user]:[group] [file]</code></td>
+          <td>Change the owner of <code>file</code> to <code>user</code> and the group to <code>group</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Paths and Wildcards</th>
+        </tr>
+        <tr>
+          <td><code>/</code></td>
+          <td>Refers to the root (top) directory.</td>
+        </tr>
+        <tr>
+          <td><code>/foo</code></td>
+          <td>Refers to the file or directory <code>foo</code> within the root directory.</td>
+        </tr>
+        <tr>
+          <td><code>foo</code></td>
+          <td>Refers to the file or directory <code>foo</code> within the current directory.</td>
+        </tr>
+        <tr>
+          <td><code>a/b</code></td>
+          <td>Refers to the file or directory <code>b</code> within directory <code>a</code>.</td>
+        </tr>
+        <tr>
+          <td><code>.</code></td>
+          <td>Refers to the current directory.</td>
+        </tr>
+        <tr>
+          <td><code>..</code></td>
+          <td>Refers to the parent of the current directory.</td>
+        </tr>
+        <tr>
+          <td><code>~</code></td>
+          <td>Expands to your home directory.</td>
+        </tr>
+        <tr>
+          <td><code>~alice</code></td>
+          <td>Expands to Alice's home directory.</td>
+        </tr>
+        <tr>
+          <td><code>*</code></td>
+          <td>Expands to all non-hidden files in the current directory.</td>
+        </tr>
+        <tr>
+          <td><code>*.txt</code></td>
+          <td>Expands to all files with names ending in <code>.txt</code> in the current directory.</td>
+        </tr>
+        <tr>
+          <td><code>{a,b,c}</code></td>
+          <td>Expands to <code>a b c</code>.</td>
+        </tr>
+        <tr>
+          <td><code>my.{txt,md}</code></td>
+          <td>Expands to <code>my.txt my.md</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Putting it Together</th>
+        </tr>
+        <tr>
+          <td><code>echo [command]</code></td>
+          <td>Show what <code>command</code> expands to without actually running it.</td>
+        </tr>
+        <tr>
+          <td><code>vim src/a/b/c/d/e/Main.java</code></td>
+          <td>Open the deeply nested file <code>Main.java</code> in Vim.</td>
+        </tr>
+        <tr>
+          <td><code>cp my.cpp{,.bak}</code></td>
+          <td>Make a copy of <code>my.cpp</code> called <code>my.cpp.bak</code>.</td>
+        </tr>
+        <tr>
+          <td><code>wc -l src/*.js</code></td>
+          <td>Show line counts of all the <code>.js</code> files within the <code>src</code> directory.</td>
+        </tr>
+        <tr>
+          <td><code>ls ~/code</code></td>
+          <td>List the contents of the <code>code</code> subdirectory of your home directory.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
