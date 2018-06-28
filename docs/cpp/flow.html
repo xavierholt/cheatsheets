@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>C++ Flow Control</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>C++ Flow Control</h1>
+
+    <p>Flow control statements let you execute code conditionally, easily repeat
+    code multiple times,  or some combination of the two: repeat code until some
+    condition is met.</p>
+
+    <h2 id="if">The <code>if</code> Statement</h2>
+
+    <p>The simplest  thing you can do is to have  a block of code that only runs
+    when some condition is met.  Use the <code>if</code> statement for this:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cin &gt;&gt; x;
+
+  std::cout &lt;&lt; "You said: " &lt;&lt; x &lt;&lt; "\n";
+  if(x &lt; 10) {
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <p>The  <code>if</code>  statement  allows you  to put an  <code>else</code>
+    statement after it. The code in the <code>else</code> block only runs if the
+    code in the <code>if</code> block did <i>not</i> run:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cin &gt;&gt; x;
+
+  std::cout &lt;&lt; "You said: " &lt;&lt; x &lt;&lt; "\n";
+  if(x &lt; 10) {
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+  }
+  else {
+    std::cout &lt;&lt; "Woah... I can't count that high.\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <p>You can  chain multiple  <code>if ... else</code>  statements together to
+    handle multiple conditions.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cin &gt;&gt; x;
+
+  std::cout &lt;&lt; "You said: " &lt;&lt; x &lt;&lt; "\n";
+  if(x == 3) {
+    std::cout &lt;&lt; "That's three!\n";
+  }
+  else if(x % 2 == 1) {
+    std::cout &lt;&lt; "That's some other odd number.\n";
+  }
+  else {
+    std::cout &lt;&lt; "I don't know this one...\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <h2 id="while">The <code>while</code> Statement</h2>
+
+    <h2 id="for">The <code>for</code> Statement</h2>
+
+    <h2 id="switch">The <code>switch</code> Statement</h2>
+
+    <h2 id="do-while">The <code>do ... while</code> Statement</h2>
+
+  </body>
+</html>
