@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Conditionals</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Conditionals</h1>
+
+    <h2 id="if">The <code>if</code> Statement</h2>
+
+    <p>Use the  <code>if</code>  statement if you want to execute some code only
+    when  some condition  is met.  The  <code>if</code>  block will run when the
+    value  in  the parentheses  is  the  boolean  <code>true</code>,  a non-zero
+    number, or a non-null pointer.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x &lt; 10) {
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <h2 id="else">The <code>else</code> Statement</h2>
+
+    <p>You can put an <code>else</code> statement after an <code>if</code> block
+    to provide a default.  The code in the <code>else</code> block runs when the
+    code in the <code>if</code> block did not.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x &lt; 10) {
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+  }
+  else {
+    std::cout &lt;&lt; "Woah... I can't count that high.\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <p>You can  chain multiple  <code>if ... else</code>  statements together to
+    handle multiple conditions.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x == 3) {
+    std::cout &lt;&lt; "That's three!\n";
+  }
+  else if(x % 2 == 1) {
+    std::cout &lt;&lt; "That's some other odd number.\n";
+  }
+  else {
+    std::cout &lt;&lt; "I don't know this one...\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <h2>Danger Zone</h2>
+    <p>If your <code>if</code> or <code>else</code> block is only one line long,
+    you don't need the curly braces.  The first example  could have been written
+    like this:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x &lt; 10)
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+
+  return 0;
+}
+</pre>
+
+    <p>But  leaving off the curly braces makes it a lot easier to make mistakes,
+    particularly if you change the code later, so it's not recommended.  In this
+    program, <code>"Try something bigger?\n"</code> always gets printed:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x &lt; 10)
+    std::cout &lt;&lt; x &lt;&lt; " is pretty small.\n";
+    std::cout &lt;&lt; "Try something bigger?\n";
+
+  return 0;
+}
+</pre>
+
+    <h2>Common Mistakes</h2>
+
+    <p>If you check for equality, make sure you use <code>==</code> instead of
+    <code>=</code>.  This code will always set <code>x</code> to seven, and then
+    always execute the <code>if</code> block, because seven isn't zero:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x = 7) {
+    std::cout &lt;&lt; "That's my lucky number!\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <p>Don't put a semicolon after an <code>if</code> statement. If you do, only
+    the semicolon (an empty statement) will be executed conditionally. This code
+    will always print <code>"That's three!\n"</code>:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  if(x == 3); {
+    std::cout &lt;&lt; "That's three!\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <h2 id="while">The <code>while</code> Statement</h2>
+
+    <h2 id="for">The <code>for</code> Statement</h2>
+
+    <h2 id="switch">The <code>switch</code> Statement</h2>
+
+    <h2 id="do-while">The <code>do ... while</code> Statement</h2>
+
+  </body>
+</html>
