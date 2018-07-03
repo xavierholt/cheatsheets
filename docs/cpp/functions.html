@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Functions</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Functions</h1>
+
+    <h2 id="functions">Basic Function Stuff</h2>
+
+    <p>Functions are blocks of code have names and can be "called," allowing you
+    to reuse the same piece of code while only writing it once.  A function
+    declaration has multiple parts: the return type of the function, its name, a
+    list of the types and names of all its parameters (in parentheses), and the
+    code block to run with the given parameters.</p>
+
+    <p>Functions  that  don't  return  anything  should  have  the  return  type
+    <code>void</code>. Functions that don't take any parameters can simply leave
+    their parentheses empty.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int gcd(int a, int b) {
+  while(a != 0) {
+    int t = b % a;
+    b = a;
+    a = t;
+  }
+
+  return b;
+}
+
+void print_gcd(int a, int b) {
+  std::cout &lt;&lt; "gcd(" &lt;&lt; a &lt;&lt; ", " &lt;&lt; b &lt;&lt; ") = ";
+  std::cout &lt;&lt; gcd(a, b) &lt;&lt; "\n";
+}
+
+void print_done() {
+  std::cout &lt;&lt; "And I'm outta here...\n";
+}
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  print_gcd(x, 12);
+  print_gcd(x, 13);
+  print_gcd(x, 14);
+  print_gcd(x, 15);
+  print_done();
+  return 0;
+}
+</pre>
+
+    <p>Function  parameters  only exist inside  the function's  code block.  The
+    <code>a</code>  and  <code>b</code> in <code>gcd()</code> are different from
+    the  <code>a</code>  and  <code>b</code>  in <code>print_gcd()</code>,  even
+    though they have the same names.</p>
+
+    <h2 id="return">The <code>return</code> Statement</h2>
+
+    <p>Functions  with a  non-void  return type  must have a <code>return</code>
+    statement so the compiler knows what value to pass back to the caller.  Void
+    functions  will automatically return  when they reach the end  of their code
+    blocks.  Any function can use <code>return</code> to return early.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+bool is_prime(int n) {
+  if(n < 2) {
+    return false;
+  }
+
+  for(int f = 2; f < n; ++f) {
+    if(n % f == 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+void print_primality(int x) {
+  if(x == 13) {
+    std::cout &lt;&lt; "Error. Unlucky. Fail.\n";
+    return;
+  }
+
+  if(is_prime(x)) {
+    std::cout &lt;&lt; x &lt;&lt; " is prime.\n";
+  }
+  else {
+    std::cout &lt;&lt; x &lt;&lt; " is not prime.\n";
+  }
+}
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  print_primality(x);
+  return 0;
+}
+</pre>
+
+    <h2>Common Mistakes</h2>
+
+    <p>You can't  call a function that the compiler doesn't know about,  and the
+    compiler reads your code from top to bottom.  If you define a function after
+    your <code>main()</code> function,  you can't use it in <code>main()</code>,
+    because the compiler  hasn't seen it yet.  Either define  all your functions
+    above <code>main()</code> or declare them in advance like this:</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+void gerbil(int n);
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "How many gerbils are there? ";
+  std::cin &gt;&gt; x;
+
+  gerbil(x);
+  return 0;
+}
+
+void gerbil(int n) {
+  for(int i = 0; i < n; ++i) {
+    std::cout << "GERBIL!\n";
+  }
+}
+</pre>
+  </body>
+</html>

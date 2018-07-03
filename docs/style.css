@@ -33,6 +33,14 @@ ul {
   width: 4in;
 }
 
+ul.index li {
+  margin-bottom: 4pt;
+}
+
+ul.index ul {
+  margin-top: 4pt;
+}
+
 table {
   border-spacing: 0;
   border-radius: 1em;
