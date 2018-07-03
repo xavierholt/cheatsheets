@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Loops</h1>
+
+    <h2 id="while">The <code>while</code> Loop</h2>
+
+    <p>Use the <code>while</code> statement to repeat a block of code as long as
+    some condition is true.  Truthiness works exactly the same as it does in the
+    <code>if</code> statement.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  while(x >= 0) {
+    std::cout &lt;&lt; x &lt;&lt; "...\n";
+    x -= 1;
+  }
+
+  std::cout &lt;&lt; "Liftoff!\n";
+  return 0;
+}
+</pre>
+
+    <h2 id="for">The <code>for</code> Loop</h2>
+
+    <p>Whenever you use a  <code>while</code>  loop,  you almost always do three
+    things:  initialize a variable,  check a condition, and update the variable.
+    The <code>for</code> loop lets you do all these things on one line.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter a number: ";
+  std::cin &gt;&gt; x;
+
+  std::cout &lt;&lt; "The powers of two less than " &lt;&lt; x &lt;&lt; "are:\n";
+  for(int y = 1; y < x; y *= 2) {
+    std::cout &lt;&lt; y &lt;&lt; "\n";
+  }
+
+  return 0;
+}
+</pre>
+
+    <h2 id="do-while">The <code>do ... while</code> Loop</h2>
+
+    <p>The <code>do ... while</code> loop is the <code>while</code> loop's weird
+    cousin. The <code>do</code> block is always executed at least once, and will
+    be executed again as long as the condition is true.  You don't see this loop
+    very often.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  do {
+    std::cout &lt;&lt; "Enter a number that isn't three: ";
+    std::cin &gt;&gt; x;
+  } while(x == 3);
+
+  std::cout &lt;&lt; "Good job.\n";
+  return 0;
+}
+</pre>
+
+    <h2>Danger Zone</h2>
+
+    <p>The semicolon at the end of the <code>do ... while</code> loop is required,
+    but putting one after a  <code>while</code> or <code>for</code> statement will
+    make  the  semicolon  (an empty statement)  the  body  of  the  loop.  This is
+    occasionally useful, but more often it's a mistake.</p>
+
+    <p>You can also have multiple actions in a <code>for</code> statement -  use a
+    comma to separate them.  Combining this with the previous trick lets you write
+    an exponentiation program as follows.  But this is just a confusing version of
+    the more obvious program.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x;
+  std::cout &lt;&lt; "Enter an exponent: ";
+  std::cin &gt;&gt; x;
+
+  int p = 1;
+  for(int i = 0; i < x; ++i, p *= 2);
+  std::cout &lt;&lt; "2^" &lt;&lt; x &lt;&lt; " = " &lt;&lt; p &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+
+    <p>Like with  <code>if</code>  and  <code>else</code> statements, loops with
+    only one statement in them  can be written  without  curly braces.  And like
+    with  the conditionals,  this is usually  a bad idea.  The following program
+    prints two, forever.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int x = 2;
+  while(x <= 8)
+    std::cout &lt;&lt; x &lt;&lt; " ";
+    x += 2;
+
+  std::cout &lt;&lt; "\nWho do you appreciate?\n";
+  return 0;
+}
+</pre>
+
+    <h2>Common Mistakes</h2>
+
+    <p>It's surprisingly easy  to write an infinite loop.  The following program
+    increments  the wrong variable in the inner loop,  and will  never terminate
+    (use  <span class="key">Ctrl</span> + <span class="key">C</span>  to  kill a
+    program that's stuck in a loop).</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int sum = 0;
+
+  for(int i = 1; i < 5; ++i) {
+    for(int j = 1; j < 5; ++i) {
+      sum += i * j;
+    }
+  }
+
+  std::cout &lt;&lt; "The sum is: " &lt;&lt; sum &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+  </body>
+</html>

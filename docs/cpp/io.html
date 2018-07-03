@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Input and Output</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <h1>Input and Output</h1>
+
+    <h2 id="stdout">Standard Output</h2>
+
+    <p>Include the  <code>iostream</code>  header to get access  to the standard
+    output stream <code>std::cout</code>. Use the <code>&lt;&lt;</code> operator
+    to send data down the stream; it will be printed to the console.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int a = 5;
+  int b = 3;
+
+  std::cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a + b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a - b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a * b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a / b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " % " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a % b &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+
+    <h2 id="stdin">Standard Input</h2>
+
+    <p>The  <code>iostream</code>  header also gives you access  to the standard
+    input stream  <code>std::cin</code>.  Use the <code>&gt;&gt;</code> operator
+    to read data  from the stream.  This normally means reading  input  from the
+    console;  it's a good idea to print a prompt so that your users know what to
+    do.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int a;
+  int b;
+  std::cout << "Enter two numbers: ";
+  std::cin >> a >> b;
+
+  std::cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a + b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a - b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a * b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a / b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " % " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a % b &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+
+    <h2 id="stderr">Standard Error</h2>
+
+    <p>Including  <code>iostream</code>  also gives you access  to the  standard
+    error  stream  <code>std::cerr</code>.  This is an  output stream  just like
+    <code>std::cout</code>, and will normally be printed to the console as well,
+    but having  two streams  lets users  send  different  types  of  messages to
+    different places  if they want.  It is typically used for  error and warning
+    messages meant for the user.</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+int main() {
+  int a;
+  int b;
+  std::cout << "Enter two numbers: ";
+  std::cin >> a >> b;
+
+  std::cout &lt;&lt; a &lt;&lt; " + " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a + b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " - " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a - b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " * " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a * b &lt;&lt; "\n";
+
+  if(b == 0) {
+    std:cerr << "Cannot divide by zero.\n";
+    return 1;
+  }
+
+  std::cout &lt;&lt; a &lt;&lt; " / " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a / b &lt;&lt; "\n";
+  std::cout &lt;&lt; a &lt;&lt; " % " &lt;&lt; b &lt;&lt; " = " &lt;&lt; a % b &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+
+    <h2 id="cli-args">Command Line Arguments</h2>
+
+    <p>You can also read the arguments passed to your program when it was run on
+    the command line.  You need an extended definition of <code>main()</code> to
+    do this.</p>
+
+    <p>The first parameter is the number of command line arguments provided. The
+    program name counts as an argument.  The second parameter is an array of the
+    arguments  themselves.  All the parameters are "C strings"  (null-terminated
+    character arrays),  so you'll probably need to convert them to the data type
+    you need.  Here we use <code>std::atoi()</code> (alpha to integer)  from the
+    <code>cstdlib</code> header to do the conversion.</p>
+
+<pre>
+#include &lt;cstdlib&gt;
+#include &lt;iostream&gt;
+
+int main(int argc, char** argv) {
+  if(argc != 3) {
+    std::cerr &lt;&lt; "USAGE: " &lt;&lt; argv[0] &lt;&lt; " [number] [number]\n";
+    return 1;
+  }
+
+  int a = std::atoi(argv[1]);
+  int b = std::atoi(argv[2]);
+
+  std::cout &lt;&lt; "You invoked this program as '" &lt;&lt; argv[0] &lt;&lt; "'\n";
+  std::cout &lt;&lt; "The sum of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b;
+  std::cout &lt;&lt; " is " &lt;&lt; a + b &lt;&lt; "\n";
+  return 0;
+}
+</pre>
+
+    <h2 id="file-io">Working with Files</h2>
+
+    <p>Include the  <code>fstream</code>  header to work with files as input and
+    output streams.  For example, an inconvenient adder:</p>
+
+<pre>
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+
+int main(int argc, char** argv) {
+  if(argc != 3) {
+    std::cerr &lt;&lt; "USAGE: " &lt;&lt; argv[0] &lt;&lt; " [src] [dst]\n";
+    return 1;
+  }
+
+  int t;
+  int n = 0;
+  int sum = 0;
+
+  std::ifstream src(argv[1]);
+  std::ofstream dst(argv[2]);
+
+  src &gt;&gt; t;
+  while(src.good()) {
+    sum += t;
+    src &gt;&gt; t;
+    ++n;
+  }
+
+  dst &lt;&lt; sum &lt;&lt; "\n";
+  std::cout &lt;&lt; "Summed " &lt;&lt; n &lt;&lt; " numbers.\n";
+  std::cout &lt;&lt; "The result is in " &lt;&lt; argv[2] &lt;&lt; "\n";
+
+  src.close();
+  dst.close();
+  return 0;
+}
+</pre>
+
+  </body>
+</html>
