@@ -97,7 +97,7 @@
         </tr>
         <tr>
           <td><code>mv [oldname] [newname]</code></td>
-          <td>Move / rename <code>oldname</code> to <code>newname</code>.</td>
+          <td>Move (rename) <code>oldname</code> to <code>newname</code>.</td>
         </tr>
         <tr>
           <td><code>mv [file1] [file2] [...] [dir]</code></td>
@@ -130,16 +130,16 @@
           <td>Show what <code>command</code> expands to without actually running it.</td>
         </tr>
         <tr>
-          <td><code>find . -name "*.js"</code></td>
-          <td>Find all files anywhere in your current directory wth names ending in <code>.js</code>.</td>
+          <td><code>find [dir] -name "*.js"</code></td>
+          <td>Find all files anywhere within <code>dir</code> with names ending in <code>.js</code>.</td>
         </tr>
         <tr>
           <td><code>grep -ne "[pattern]" [file]</code></td>
           <td>Find lines matching <code>pattern</code> in <code>file</code> (and their <code>-n</code> line numbers).</td>
         </tr>
         <tr>
-          <td><code>grep . -Irne "[pattern]"</code></td>
-          <td>Find lines matching <code>pattern</code> in <code>-r</code> all <code>-I</code> non-binary files in this directory.</td>
+          <td><code>grep [dir] -Irne "[pattern]"</code></td>
+          <td>Find lines matching <code>pattern</code> in <code>-r</code> all <code>-I</code> non-binary files within <code>dir</code>.</td>
         </tr>
         <tr>
           <td><code>wc [option] [file]</code></td>
