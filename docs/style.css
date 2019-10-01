@@ -45,15 +45,12 @@ table {
   border-spacing: 0;
   border-radius: 1em;
   margin: 1em auto;
-  min-width: 9in;
 }
 
-tbody::after
-{
+tbody::after {
   content: '';
   display: block;
   height: 1em;
-
 }
 
 th {

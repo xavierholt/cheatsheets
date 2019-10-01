@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pwntools Cheatsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="cheatsheet">
+    <h1>Pwntools Cheatsheet</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="2">Making a Connection</th>
+        </tr>
+        <tr>
+          <td><code>import pwn</code></td>
+          <td>Import the <code>pwn</code> module.</td>
+        </tr>
+        <tr>
+          <td><code>conn = pwn.process(path)</code></td>
+          <td>Start and connect to the local executable at <code>path</code>.</td>
+        </tr>
+        <tr>
+          <td><code>conn = pwn.remote(host, port)</code></td>
+          <td>Connect to TCP port <code>port</code> on <code>host</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Sending and Receiving Data</th>
+        </tr>
+        <tr>
+          <td><code>conn.send(s)</code></td>
+          <td>Send the string <code>s</code>.</td>
+        </tr>
+        <tr>
+          <td><code>conn.sendline(s)</code></td>
+          <td>Send the string <code>s</code> and a newline.</td>
+        </tr>
+        <tr>
+          <td><code>s = conn.recv(n)</code></td>
+          <td>Receive up to <code>n</code> bytes.</td>
+        </tr>
+        <tr>
+          <td><code>s = conn.recvn(n)</code></td>
+          <td>Receive exactly <code>n</code> bytes.</td>
+        </tr>
+        <tr>
+          <td><code>s = conn.recvline()</code></td>
+          <td>Receive up to and including a newline.</td>
+        </tr>
+        <tr>
+          <td><code>s = conn.recvuntil(prompt)</code></td>
+          <td>Receive up to and including the string <code>prompt</code>.</td>
+        </tr>
+        <tr>
+          <td><code>s = conn.recvregex(regex)</code></td>
+          <td>Receive up to and including something that matches <code>regex</code>.</td>
+        </tr>
+        <tr>
+          <td><code>conn.interactive()</code></td>
+          <td>Drop into interactive mode.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Packing and Unpacking Integers</th>
+        </tr>
+        <tr>
+          <td><code>s = pwn.p&lt;N&gt;(n)</code></td>
+          <td>Pack unsigned <code>N</code>-bit integer <code>n</code> into a string.</td>
+        </tr>
+        <tr>
+          <td><code>n = pwn.u&lt;N&gt;(s)</code></td>
+          <td>Unpack string <code>s</code> into an unsigned <code>N</code>-bit integer.</td>
+        </tr>
+        <tr>
+          <td><code>s = pwn.p&lt;N&gt;(n, sign=True)</code></td>
+          <td>Pack signed <code>N</code>-bit integer <code>n</code> into a string.</td>
+        </tr>
+        <tr>
+          <td><code>n = pwn.u&lt;N&gt;(s, sign=True)</code></td>
+          <td>Unpack string <code>s</code> into a signed <code>N</code>-bit integer.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Shellcraft</th>
+        </tr>
+        <tr>
+          <td><code>asm = pwn.shellcraft.sh()</code></td>
+          <td>Generate assembly that opens an interactive shell.</td>
+        </tr>
+        <tr>
+          <td><code>asm = pwn.shellcraft.cat(path)</code></td>
+          <td>Generate assembly that dumps the file at <code>path</code>.</td>
+        </tr>
+        <tr>
+          <td><code>asm = pwn.shellcraft.exit(code)</code></td>
+          <td>Generate assembly that exits with code <code>code</code>.</td>
+        </tr>
+        <tr>
+          <td><code>asm = pwn.shellcraft.nop()</code></td>
+          <td>Generate assembly for a single-byte no-op.</td>
+        </tr>
+        <tr>
+          <td><code>bin = pwn.asm(asm)</code></td>
+          <td>Assembles <code>asm</code> into a binary snippet.</td>
+        </tr>
+        <tr>
+          <td><code>asm = pwn.disasm(bin)</code></td>
+          <td>Disassembles <code>bin</code> into assembly.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="2">Context Control</th>
+        </tr>
+        <tr>
+          <td><code>pwn.context.log_level = "debug"</code></td>
+          <td>Log all traffic through your connection.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context.log_level = "warn"</code></td>
+          <td>Don't log unless something goes wrong.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context.arch = "i386"</code></td>
+          <td>Set the target CPU architecture.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context.os = "linux"</code></td>
+          <td>Set the target operating system.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context.endian = "big"</code></td>
+          <td>Set the target endianness.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context.word_size = 32</code></td>
+          <td>Set the target word size.</td>
+        </tr>
+        <tr>
+          <td><code>pwn.context(arch="arm", ...)</code></td>
+          <td>Set any of the above in a single line.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
