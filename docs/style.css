@@ -92,6 +92,7 @@ tr:last-child td:last-child {
 
 code {
   background-color: #eee;
+  border-radius: 2pt;
   padding: 0 2pt;
 }
 
