@@ -60,6 +60,14 @@
           <td>Receive up to and including something that matches <code>regex</code>.</td>
         </tr>
         <tr>
+          <td><code>s = conn.recvall()</code></td>
+          <td>Receive everything until the connection closes.</td>
+        </tr>
+        <tr>
+          <td><code>conn.sendlineafter(prompt, s)</code></td>
+          <td>Receive until <code>prompt</code>, then send the string <code>s</code>.</td>
+        </tr>
+        <tr>
           <td><code>conn.interactive()</code></td>
           <td>Drop into interactive mode.</td>
         </tr>
