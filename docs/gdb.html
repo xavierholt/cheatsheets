@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GDB Cheatsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="cheatsheet">
+    <h1>GDB Cheatsheet</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th colspan="3">Running a Program</th>
+        </tr>
+        <tr>
+          <td><code>gdb [prog]</code> <span title="Run this in your terminal, not in GDB.">*</span></td>
+          <td></td>
+          <td>Open <code>prog</code> in the debugger.</td>
+        </tr>
+        <tr>
+          <td><code>gdb [prog] [core]</code> <span title="Run this in your terminal, not in GDB.">*</span></td>
+          <td></td>
+          <td>Open <code>prog</code> in the debugger with corefile <code>core</code>.</td>
+        </tr>
+        <tr>
+          <td><code>run</code></td>
+          <td><code>r</code></td>
+          <td>Run the program.</td>
+        </tr>
+        <tr>
+          <td><code>run [arg1] [...]</code></td>
+          <td></td>
+          <td>Run the program with command line arguments.</td>
+        </tr>
+        <tr>
+          <td><code>run < [file]</code></td>
+          <td></td>
+          <td>Run the program with standard input piped from <code>file</code>.</td>
+        </tr>
+        <tr>
+          <td><code>quit</code></td>
+          <td><code>q</code></td>
+          <td>Exit the debugger.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Pausing and Continuing</th>
+        </tr>
+        <tr>
+          <td><span class="key">Ctrl</span> + <span class="key">C</span></td>
+          <td></td>
+          <td>Pause the program and open the debugger console.</td>
+        </tr>
+        <tr>
+          <td><code>step [n=1]</code></td>
+          <td><code>s</code></td>
+          <td>Run <code>n</code> lines of source code, then pause.</td>
+        </tr>
+        <tr>
+          <td><code>next [n=1]</code></td>
+          <td><code>n</code></td>
+          <td>Like <code>step</code>, but don't count lines inside function calls.</td>
+        </tr>
+        <tr>
+          <td><code>stepi [n=1]</code></td>
+          <td><code>si</code></td>
+          <td>Run <code>n</code> machine instructions, then pause.</td>
+        </tr>
+        <tr>
+          <td><code>nexti [n=1]</code></td>
+          <td><code>ni</code></td>
+          <td>Like <code>stepi</code>, but don't count instructions inside <code>call</code>s.</td>
+        </tr>
+        <tr>
+          <td><code>finish</code></td>
+          <td><code>f</code></td>
+          <td>Run until the current function is finished, then pause.</td>
+        </tr>
+        <tr>
+          <td><code>continue</code></td>
+          <td><code>c</code></td>
+          <td>Start a paused program running normally again.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Walking the Stack</th>
+        </tr>
+        <tr>
+          <td><code>backtrace</code></td>
+          <td><code>bt</code></td>
+          <td>Show the function call stack.</td>
+        </tr>
+        <tr>
+          <td><code>up [n=1]</code></td>
+          <td></td>
+          <td>Go up <code>n</code> stack frames.</td>
+        </tr>
+        <tr>
+          <td><code>down [n=1]</code></td>
+          <td></td>
+          <td>Go down <code>n</code> stack frames.</td>
+        </tr>
+        <tr>
+          <td><code>frame [n]</code></td>
+          <td></td>
+          <td>Go to stack frame <code>n</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Looking Around</th>
+        </tr>
+        <tr>
+          <td><code>info args</code></td>
+          <td><code>i ar</code></td>
+          <td>Show the values of any arguments to the current function.</td>
+        </tr>
+        <tr>
+          <td><code>info locals</code></td>
+          <td><code>i lo</code></td>
+          <td>Show the values of any local variables.</td>
+        </tr>
+        <tr>
+          <td><code>print [expr]</code></td>
+          <td></td>
+          <td>Evaluate <code>expr</code> and print the result.</td>
+        </tr>
+        <tr>
+          <td><code>print ([type]) [expr]</code></td>
+          <td></td>
+          <td>Cast the result of <code>expr</code> to <code>type</code> and print it.</td>
+        </tr>
+        <tr>
+          <td><code>print $[reg]</code></td>
+          <td></td>
+          <td>Print the value of register <code>reg</code>.</td>
+        </tr>
+        <tr>
+          <td><code>x [expr]</code></td>
+          <td><code>x</code></td>
+          <td>Evaluate <code>expr</code> to a pointer and examine its target.</td>
+        </tr>
+        <tr>
+          <td><code>x $[reg]</code></td>
+          <td></td>
+          <td>Examine the memory pointed to by register <code>reg</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Breakpoints</th>
+        </tr>
+        <tr>
+          <td><code>break [name]</code></td>
+          <td><code>b</code></td>
+          <td>Create a breakpoint at the entry to function <code>name</code>.</td>
+        </tr>
+        <tr>
+          <td><code>break [file]:[line]</code></td>
+          <td></td>
+          <td>Create a breakpoint at the code from <code>line</code> in <code>file</code>.</td>
+        </tr>
+        <tr>
+          <td><code>break *[addr]</code></td>
+          <td></td>
+          <td>Create a breakpoint at memory address <code>addr</code>.</td>
+        </tr>
+        <tr>
+          <td><code>break ... if [cond]</code></td>
+          <td></td>
+          <td>Create a breakpoint that only triggers when <code>cond</code> is true.</td>
+        </tr>
+        <tr>
+          <td><code>info breakpoints</code></td>
+          <td><code>i b</code></td>
+          <td>List all current breakpoints.</td>
+        </tr>
+        <tr>
+          <td><code>disable [n]</code></td>
+          <td></td>
+          <td>Disable breakpoint number <code>n</code>; also accepts a range.</td>
+        </tr>
+        <tr>
+          <td><code>enable [n]</code></td>
+          <td></td>
+          <td>Enable breakpoint number <code>n</code>; also accepts a range.</td>
+        </tr>
+        <tr>
+          <td><code>delete [n]</code></td>
+          <td><code>d</code></td>
+          <td>Delete breakpoint number <code>n</code>; also accepts a range.</td>
+        </tr>
+        <tr>
+          <td><code>clear ...</code></td>
+          <td></td>
+          <td>Delete a breakpoint using the same syntax as <code>break</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Miscellaneous</th>
+        </tr>
+        <tr>
+          <td><code>help</code></td>
+          <td><code>h</code></td>
+          <td>Show the top-level help menu.</td>
+        </tr>
+        <tr>
+          <td><code>help [command]</code></td>
+          <td></td>
+          <td>Show the help entry for <code>command</code>.</td>
+        </tr>
+        <tr>
+          <td><code>info proc mappings</code></td>
+          <td><code>i proc m</code></td>
+          <td>Show the program's memory layout.</td>
+        </tr>
+        <tr>
+          <td><code>info registers</code></td>
+          <td><code>i r</code></td>
+          <td>Show the contents of the CPU registers.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
