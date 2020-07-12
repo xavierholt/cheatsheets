@@ -128,7 +128,7 @@
         </tr>
         <tr>
           <td><code>print [expr]</code></td>
-          <td></td>
+          <td><code>p</code></td>
           <td>Evaluate <code>expr</code> and print the result.</td>
         </tr>
         <tr>
@@ -227,6 +227,26 @@
           <td><code>info registers</code></td>
           <td><code>i r</code></td>
           <td>Show the contents of the CPU registers.</td>
+        </tr>
+        <tr>
+          <td><code>info frame</code></td>
+          <td><code>i f</code></td>
+          <td>Show information about the current stack frame.</td>
+        </tr>
+        <tr>
+          <td><code>list [addr=*$rip]</code></td>
+          <td><code>l</code></td>
+          <td>Print source code for the function containing <code>addr</code>.</td>
+        </tr>
+        <tr>
+          <td><code>disassemble [addr=*$rip]</code></td>
+          <td><code>disas</code></td>
+          <td>Disassemble the function containing <code>addr</code>.</td>
+        </tr>
+        <tr>
+          <td><span class="key">↵ Enter</span></td>
+          <td></td>
+          <td>Repeat or continue the previous command.</td>
         </tr>
       </tbody>
     </table>
