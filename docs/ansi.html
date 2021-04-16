@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ANSI Escape Codes</title>
+    <link rel="stylesheet" href="style.css" />
+    <style type="text/css">
+      content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      table {
+        font-family: monospace;
+        display: block;
+        margin: 0 6pt;
+      }
+
+      th {
+        font-size: 100%;
+        padding: 4pt 1em;
+      }
+
+      td {
+        padding: 2pt 6pt;
+      }
+
+      tr > :nth-child(1) {font-weight: bold; padding-left: 1em;}
+      tr > :nth-child(2) {text-align: center;}
+      tr > :nth-child(3) {text-align: center;}
+      tr > :nth-child(4) {text-align: center;}
+
+      span {
+        display: inline-block;
+        border-radius: 4pt;
+        font-weight: normal !important;
+        padding: 2pt 3pt;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ANSI Escape Codes</h1>
+    <content>
+      <table>
+        <thead>
+          <tr>
+            <th>Effect</th>
+            <th>On</th>
+            <th>Off</th>
+            <th>Sample</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Reset All</td>
+            <td></td>
+            <td>0</td>
+            <td><span>example</span></td>
+          </tr>
+          <tr>
+            <td>Reset FG</td>
+            <td></td>
+            <td>39</td>
+            <td><span>example</span></td>
+          </tr>
+          <tr>
+            <td>Reset BG</td>
+            <td></td>
+            <td>49</td>
+            <td><span>example</span></td>
+          </tr>
+          <tr>
+            <td>Bold</td>
+            <td>1</td>
+            <td>22</td>
+            <td><span style="font-weight: bold !important;">example</span></td>
+          </tr>
+          <tr>
+            <td>Dim</td>
+            <td>2</td>
+            <td>22</td>
+            <td><span style="color: #808080">example</span></td>
+          </tr>
+          <tr>
+            <td>Underline</td>
+            <td>4</td>
+            <td>24</td>
+            <td><span style="text-decoration: underline;">example</span></td>
+          </tr>
+          <tr>
+            <td>Strikeout</td>
+            <td>9</td>
+            <td>29</td>
+            <td><span style="text-decoration: line-through;">example</span></td>
+          </tr>
+          <tr>
+            <td>Overline</td>
+            <td>53</td>
+            <td>55</td>
+            <td><span style="text-decoration: overline;">example</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Normal</th>
+            <th>FG</th>
+            <th>BG</th>
+            <th>Sample</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Black</td>
+            <td>30</td>
+            <td>40</td>
+            <td><span style="background-color: #000000; color: #ffffff;">#000000</span></td>
+          </tr>
+          <tr>
+            <td>Red</td>
+            <td>31</td>
+            <td>41</td>
+            <td><span style="background-color: #aa0000; color: #ffffff;">#aa0000</span></td>
+          </tr>
+          <tr>
+            <td>Green</td>
+            <td>32</td>
+            <td>42</td>
+            <td><span style="background-color: #00aa00; color: #ffffff;">#00aa00</span></td>
+          </tr>
+          <tr>
+            <td>Yellow</td>
+            <td>33</td>
+            <td>43</td>
+            <td><span style="background-color: #aa5500; color: #ffffff;">#aa5500</span></td>
+          </tr>
+          <tr>
+            <td>Blue</td>
+            <td>34</td>
+            <td>44</td>
+            <td><span style="background-color: #0000aa; color: #ffffff;">#0000aa</span></td>
+          </tr>
+          <tr>
+            <td>Magenta</td>
+            <td>35</td>
+            <td>45</td>
+            <td><span style="background-color: #aa00aa; color: #ffffff;">#aa00aa</span></td>
+          </tr>
+          <tr>
+            <td>Cyan</td>
+            <td>36</td>
+            <td>46</td>
+            <td><span style="background-color: #00aaaa; color: #ffffff;">#00aaaa</span></td>
+          </tr>
+          <tr>
+            <td>White</td>
+            <td>37</td>
+            <td>47</td>
+            <td><span style="background-color: #aaaaaa; color: #ffffff;">#aaaaaa</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Bright</th>
+            <th>FG</th>
+            <th>BG</th>
+            <th>Sample</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Black</td>
+            <td>90</td>
+            <td>100</td>
+            <td><span style="background-color: #aaaaaa; color: #000000;">#aaaaaa</span></td>
+          </tr>
+          <tr>
+            <td>Red</td>
+            <td>91</td>
+            <td>101</td>
+            <td><span style="background-color: #ffaaaa; color: #000000;">#ffaaaa</span></td>
+          </tr>
+          <tr>
+            <td>Green</td>
+            <td>92</td>
+            <td>102</td>
+            <td><span style="background-color: #aaffaa; color: #000000;">#aaffaa</span></td>
+          </tr>
+          <tr>
+            <td>Yellow</td>
+            <td>93</td>
+            <td>103</td>
+            <td><span style="background-color: #ffffaa; color: #000000;">#ffffaa</span></td>
+          </tr>
+          <tr>
+            <td>Blue</td>
+            <td>94</td>
+            <td>104</td>
+            <td><span style="background-color: #aaaaff; color: #000000;">#aaaaff</span></td>
+          </tr>
+          <tr>
+            <td>Magenta</td>
+            <td>95</td>
+            <td>105</td>
+            <td><span style="background-color: #ffaaff; color: #000000;">#ffaaff</span></td>
+          </tr>
+          <tr>
+            <td>Cyan</td>
+            <td>96</td>
+            <td>106</td>
+            <td><span style="background-color: #aaffff; color: #000000;">#aaffff</span></td>
+          </tr>
+          <tr>
+            <td>White</td>
+            <td>97</td>
+            <td>107</td>
+            <td><span style="background-color: #ffffff; color: #000000;">#ffffff</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </content>
+  </body>
+</html>
