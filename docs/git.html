@@ -15,11 +15,11 @@
         </tr>
         <tr>
           <td><code>git clone [url]</code></td>
-          <td>Clone the Git repo at <code>url</code> into a new directory.</td>
+          <td>Download the Git repo at <code>url</code> into a new directory.</td>
         </tr>
         <tr>
           <td><code>git clone [url] [dir]</code></td>
-          <td>Clone the Git repo at <code>url</code> into a new directory called <code>dir</code>.</td>
+          <td>Download the Git repo at <code>url</code> into a new directory called <code>dir</code>.</td>
         </tr>
         <tr>
           <td><code>git init</code></td>
@@ -100,7 +100,7 @@
           <td>Show the details of your local changes to <code>path</code>.</td>
         </tr>
         <tr>
-          <td><code>git checkout -- [path]</code></td>
+          <td><code>git restore [path]</code></td>
           <td>Discard your local changes to <code>path</code>.</td>
         </tr>
         <tr>
@@ -108,12 +108,16 @@
           <td>Stage your local changes to <code>path</code> so they're ready to commit.</td>
         </tr>
         <tr>
-          <td><code>git reset HEAD [path]</code></td>
+          <td><code>git diff --staged</code></td>
+          <td>Show the details of your staged changes.</td>
+        </tr>
+        <tr>
+          <td><code>git restore --staged [path]</code></td>
           <td>Unstage your changes to <code>path</code>.</td>
         </tr>
         <tr>
           <td><code>git commit -m "[message]"</code></td>
-          <td>Commit your staged changes with the message <code>message</code>.</td>
+          <td>Commit your staged changes with a descriptive <code>message</code>.</td>
         </tr>
       </tbody>
 
@@ -123,7 +127,7 @@
         </tr>
         <tr>
           <td><code>git pull</code></td>
-          <td>Pull any changes to your current branch from your current remote.</td>
+          <td>Pull any new commits to your current branch from your current remote.</td>
         </tr>
         <tr>
           <td><code>git pull [remote] [branch]</code></td>
