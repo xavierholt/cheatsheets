@@ -29,7 +29,7 @@
           <td>Run the program.</td>
         </tr>
         <tr>
-          <td><code>run [arg1] [...]</code></td>
+          <td><code>run [arg1] ...</code></td>
           <td></td>
           <td>Run the program with command line arguments.</td>
         </tr>
@@ -180,7 +180,7 @@
         <tr>
           <td><code>info breakpoints</code></td>
           <td><code>i b</code></td>
-          <td>List all current breakpoints.</td>
+          <td>List all current breakpoints and catchpoints.</td>
         </tr>
         <tr>
           <td><code>disable [n]</code></td>
@@ -201,6 +201,47 @@
           <td><code>clear ...</code></td>
           <td></td>
           <td>Delete a breakpoint using the same syntax as <code>break</code>.</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <th colspan="3">Catchpoints</th>
+        </tr>
+        <tr>
+          <td><code>catch throw</code></td>
+          <td></td>
+          <td>Break when a C++ exception is thrown.</td>
+        </tr>
+        <tr>
+          <td><code>catch syscall</code></td>
+          <td></td>
+          <td>Break when a system call is made.</td>
+        </tr>
+        <tr>
+          <td><code>catch syscall [n] ...</code></td>
+          <td></td>
+          <td>Break on system calls with name or number <code>n</code>.</td>
+        </tr>
+        <tr>
+          <td><code>catch signal [sig] ...</code></td>
+          <td></td>
+          <td>Break when signal <code>sig</code> (or <code>all</code>) is delivered.</td>
+        </tr>
+        <tr>
+          <td><code>catch load</code></td>
+          <td></td>
+          <td>Break when a shared library is loaded.</td>
+        </tr>
+        <tr>
+          <td><code>tcatch ...</code></td>
+          <td></td>
+          <td>Create a catchpoint that will only catch one event.</td>
+        </tr>
+        <tr>
+          <td><code>info breakpoints</code></td>
+          <td><code>i b</code></td>
+          <td>List all current catchpoints and breakpoints.</td>
         </tr>
       </tbody>
 
