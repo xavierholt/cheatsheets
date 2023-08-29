@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Periodic Table</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style type="text/css">
+      h1 {
+        font-family: monospace;
+        font-size: 300%;
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      table {
+        margin: 0 auto;
+      }
+
+      td {
+        min-width: 3rem;
+        text-align: center;
+      }
+
+      td.atom {
+        background-color: #ddd;
+        border-radius: 4pt;
+        cursor: default;
+        padding: 3pt;
+      }
+
+      td.atom * {
+        display: block;
+      }
+
+      td.atom a {
+        color: auto;
+        font-weight: bold;
+      }
+
+      td.atom.alkali-metal a     {color: #800;}
+      td.atom.alkali-earth a     {color: #602;}
+      td.atom.transition-metal a {color: #620;}
+      td.atom.metal a            {color: #422;}
+      td.atom.metalloid a        {color: #242;}
+      td.atom.non-metal a        {color: #062;}
+      td.atom.halogen a          {color: #008;}
+      td.atom.noble-gas a        {color: #206;}
+      td.atom.lanthanide a       {color: #603;}
+      td.atom.actinide a         {color: #606;}
+
+      .atwt {
+        color: #888;
+        font-size: 70%;
+      }
+    </style>
+  </head>
+  <body id="cheatsheet">
+    <h1>The Periodic Table</h1>
+
+    <table>
+      <tr>
+        <td></td>
+        <td><a title="Alkali Metals" href="https://en.wikipedia.org/wiki/Alkali_metal">1</a></td>
+        <td><a title="Alkaline Earth Metals" href="https://en.wikipedia.org/wiki/Alkaline_earth_metal">2</a></td>
+        <td></td>
+        <td><a title="Group 3" href="https://en.wikipedia.org/wiki/Group_3_element">3</a></td>
+        <td><a title="Group 4" href="https://en.wikipedia.org/wiki/Group_4_element">4</a></td>
+        <td><a title="Group 5" href="https://en.wikipedia.org/wiki/Group_5_element">5</a></td>
+        <td><a title="Group 6" href="https://en.wikipedia.org/wiki/Group_6_element">6</a></td>
+        <td><a title="Group 7" href="https://en.wikipedia.org/wiki/Group_7_element">7</a></td>
+        <td><a title="Group 8" href="https://en.wikipedia.org/wiki/Group_8_element">8</a></td>
+        <td><a title="Group 9" href="https://en.wikipedia.org/wiki/Group_9_element">9</a></td>
+        <td><a title="Group 10" href="https://en.wikipedia.org/wiki/Group_10_element">10</a></td>
+        <td><a title="Group 11" href="https://en.wikipedia.org/wiki/Group_11_element">11</a></td>
+        <td><a title="Group 12" href="https://en.wikipedia.org/wiki/Group_12_element">12</a></td>
+        <td><a title="Triels" href="https://en.wikipedia.org/wiki/Boron_group">13</a></td>
+        <td><a title="Tetrels" href="https://en.wikipedia.org/wiki/Carbon_group">14</a></td>
+        <td><a title="Pnictogens" href="https://en.wikipedia.org/wiki/Pnictogen">15</a></td>
+        <td><a title="Chalcogens" href="https://en.wikipedia.org/wiki/Chalcogen">16</a></td>
+        <td><a title="Halogens" href="https://en.wikipedia.org/wiki/Halogen">17</a></td>
+        <td><a title="Noble Gases" href="https://en.wikipedia.org/wiki/Noble_gas">18</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a title="Period 1" href="https://en.wikipedia.org/wiki/Period_1_element">1</a></td>
+        <td class="atom non-metal" title="Hydrogen">
+          <span class="atno">1</span>
+          <a href="https://en.wikipedia.org/wiki/Hydrogen">H</a>
+          <span class="atwt">1.0080</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="atom noble-gas" title="Helium">
+          <span class="atno">2</span>
+          <a href="https://en.wikipedia.org/wiki/Helium">He</a>
+          <span class="atwt">4.0026</span>
+        </td>
+        <td><a title="Period 1" href="https://en.wikipedia.org/wiki/Period_1_element">1</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 2" href="https://en.wikipedia.org/wiki/Period_2_element">2</a></td>
+        <td class="atom alkali-metal" title="Lithium">
+          <span class="atno">3</span>
+          <a href="https://en.wikipedia.org/wiki/Lithium">Li</a>
+          <span class="atwt">6.94</span>
+        </td>
+        <td class="atom alkali-earth" title="Berylium">
+          <span class="atno">4</span>
+          <a href="https://en.wikipedia.org/wiki/Berylium">Be</a>
+          <span class="atwt">9.0122</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="atom metalloid" title="Boron">
+          <span class="atno">5</span>
+          <a href="https://en.wikipedia.org/wiki/Boron">B</a>
+          <span class="atwt">10.81</span>
+        </td>
+        <td class="atom non-metal" title="Carbon">
+          <span class="atno">6</span>
+          <a href="https://en.wikipedia.org/wiki/Carbon">C</a>
+          <span class="atwt">12.011</span>
+        </td>
+        <td class="atom non-metal" title="Nitrogen">
+          <span class="atno">7</span>
+          <a href="https://en.wikipedia.org/wiki/Nitrogen">N</a>
+          <span class="atwt">14.007</span>
+        </td>
+        <td class="atom non-metal" title="Oxygen">
+          <span class="atno">8</span>
+          <a href="https://en.wikipedia.org/wiki/Oxygen">O</a>
+          <span class="atwt">15.999</span>
+        </td>
+        <td class="atom halogen" title="Fluorine">
+          <span class="atno">9</span>
+          <a href="https://en.wikipedia.org/wiki/Fluorine">F</a>
+          <span class="atwt">18.998</span>
+        </td>
+        <td class="atom noble-gas" title="Neon">
+          <span class="atno">10</span>
+          <a href="https://en.wikipedia.org/wiki/Neon">Ne</a>
+          <span class="atwt">20.180</span>
+        </td>
+        <td><a title="Period 2" href="https://en.wikipedia.org/wiki/Period_2_element">2</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 3" href="https://en.wikipedia.org/wiki/Period_3_element">3</a></td>
+        <td class="atom alkali-metal" title="Sodium">
+          <span class="atno">11</span>
+          <a href="https://en.wikipedia.org/wiki/Sodium">Na</a>
+          <span class="atwt">22.990</span>
+        </td>
+        <td class="atom alkali-earth" title="Magnesium">
+          <span class="atno">12</span>
+          <a href="https://en.wikipedia.org/wiki/Magnesium">Mg</a>
+          <span class="atwt">24.305</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="atom metal" title="Aluminum">
+          <span class="atno">13</span>
+          <a href="https://en.wikipedia.org/wiki/Aluminum">Al</a>
+          <span class="atwt">26.982</span>
+        </td>
+        <td class="atom metalloid" title="Silicon">
+          <span class="atno">14</span>
+          <a href="https://en.wikipedia.org/wiki/Silicon">Si</a>
+          <span class="atwt">28.085</span>
+        </td>
+        <td class="atom non-metal" title="Phosphorous">
+          <span class="atno">15</span>
+          <a href="https://en.wikipedia.org/wiki/Phosphorous">P</a>
+          <span class="atwt">30.974</span>
+        </td>
+        <td class="atom non-metal" title="Sulfur">
+          <span class="atno">16</span>
+          <a href="https://en.wikipedia.org/wiki/Sulfur">S</a>
+          <span class="atwt">32.06</span>
+        </td>
+        <td class="atom halogen" title="Chlorine">
+          <span class="atno">17</span>
+          <a href="https://en.wikipedia.org/wiki/Chlorine">Cl</a>
+          <span class="atwt">35.45</span>
+        </td>
+        <td class="atom noble-gas" title="Argon">
+          <span class="atno">18</span>
+          <a href="https://en.wikipedia.org/wiki/Argon">Ar</a>
+          <span class="atwt">39.95</span>
+        </td>
+        <td><a title="Period 3" href="https://en.wikipedia.org/wiki/Period_3_element">3</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 4" href="https://en.wikipedia.org/wiki/Period_4_element">4</a></td>
+        <td class="atom alkali-metal" title="Potassium">
+          <span class="atno">19</span>
+          <a href="https://en.wikipedia.org/wiki/Potassium">K</a>
+          <span class="atwt">39.098</span>
+        </td>
+        <td class="atom alkali-earth" title="Calcium">
+          <span class="atno">20</span>
+          <a href="https://en.wikipedia.org/wiki/Calcium">Ca</a>
+          <span class="atwt">40.078</span>
+        </td>
+        <td></td>
+        <td class="atom transition-metal" title="Scandium">
+          <span class="atno">21</span>
+          <a href="https://en.wikipedia.org/wiki/Scandium">Sc</a>
+          <span class="atwt">44.956</span>
+        </td>
+        <td class="atom transition-metal" title="Titamium">
+          <span class="atno">22</span>
+          <a href="https://en.wikipedia.org/wiki/Titamium">Ti</a>
+          <span class="atwt">47.867</span>
+        </td>
+        <td class="atom transition-metal" title="Vanadium">
+          <span class="atno">23</span>
+          <a href="https://en.wikipedia.org/wiki/Vanadium">V</a>
+          <span class="atwt">50.942</span>
+        </td>
+        <td class="atom transition-metal" title="Chromium">
+          <span class="atno">24</span>
+          <a href="https://en.wikipedia.org/wiki/Chromium">Cr</a>
+          <span class="atwt">51.996</span>
+        </td>
+        <td class="atom transition-metal" title="Manganese">
+          <span class="atno">25</span>
+          <a href="https://en.wikipedia.org/wiki/Manganese">Mn</a>
+          <span class="atwt">54.938</span>
+        </td>
+        <td class="atom transition-metal" title="Iron">
+          <span class="atno">26</span>
+          <a href="https://en.wikipedia.org/wiki/Iron">Fe</a>
+          <span class="atwt">55.845</span>
+        </td>
+        <td class="atom transition-metal" title="Cobalt">
+          <span class="atno">27</span>
+          <a href="https://en.wikipedia.org/wiki/Cobalt">Co</a>
+          <span class="atwt">58.933</span>
+        </td>
+        <td class="atom transition-metal" title="Nickel">
+          <span class="atno">28</span>
+          <a href="https://en.wikipedia.org/wiki/Nickel">Ni</a>
+          <span class="atwt">58.693</span>
+        </td>
+        <td class="atom transition-metal" title="Copper">
+          <span class="atno">29</span>
+          <a href="https://en.wikipedia.org/wiki/Copper">Cu</a>
+          <span class="atwt">63.546</span>
+        </td>
+        <td class="atom transition-metal" title="Zinc">
+          <span class="atno">30</span>
+          <a href="https://en.wikipedia.org/wiki/Zinc">Zn</a>
+          <span class="atwt">65.38</span>
+        </td>
+        <td class="atom metal" title="Gallium">
+          <span class="atno">31</span>
+          <a href="https://en.wikipedia.org/wiki/Gallium">Ga</a>
+          <span class="atwt">69.723</span>
+        </td>
+        <td class="atom metalloid" title="Germanium">
+          <span class="atno">32</span>
+          <a href="https://en.wikipedia.org/wiki/Germanium">Ge</a>
+          <span class="atwt">72.630</span>
+        </td>
+        <td class="atom metalloid" title="Arsenic">
+          <span class="atno">33</span>
+          <a href="https://en.wikipedia.org/wiki/Arsenic">As</a>
+          <span class="atwt">74.922</span>
+        </td>
+        <td class="atom non-metal" title="Selenium">
+          <span class="atno">34</span>
+          <a href="https://en.wikipedia.org/wiki/Selenium">Se</a>
+          <span class="atwt">78.971</span>
+        </td>
+        <td class="atom halogen" title="Bromine">
+          <span class="atno">35</span>
+          <a href="https://en.wikipedia.org/wiki/Bromine">Br</a>
+          <span class="atwt">79.904</span>
+        </td>
+        <td class="atom noble-gas" title="Krypton">
+          <span class="atno">36</span>
+          <a href="https://en.wikipedia.org/wiki/Krypton">Kr</a>
+          <span class="atwt">83.798</span>
+        </td>
+        <td><a title="Period 4" href="https://en.wikipedia.org/wiki/Period_4_element">4</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 5" href="https://en.wikipedia.org/wiki/Period_5_element">5</a></td>
+        <td class="atom alkali-metal" title="Rubidium">
+          <span class="atno">37</span>
+          <a href="https://en.wikipedia.org/wiki/Rubidium">Rb</a>
+          <span class="atwt">85.468</span>
+        </td>
+        <td class="atom alkali-earth" title="Strontium">
+          <span class="atno">38</span>
+          <a href="https://en.wikipedia.org/wiki/Strontium">Sr</a>
+          <span class="atwt">87.62</span>
+        </td>
+        <td></td>
+        <td class="atom transition-metal" title="Yttrium">
+          <span class="atno">39</span>
+          <a href="https://en.wikipedia.org/wiki/Yttrium">Y</a>
+          <span class="atwt">88.906</span>
+        </td>
+        <td class="atom transition-metal" title="Zirconium">
+          <span class="atno">40</span>
+          <a href="https://en.wikipedia.org/wiki/Zirconium">Zr</a>
+          <span class="atwt">91.224</span>
+        </td>
+        <td class="atom transition-metal" title="Niobium">
+          <span class="atno">41</span>
+          <a href="https://en.wikipedia.org/wiki/Niobium">Nb</a>
+          <span class="atwt">92.906</span>
+        </td>
+        <td class="atom transition-metal" title="Molybdenum">
+          <span class="atno">42</span>
+          <a href="https://en.wikipedia.org/wiki/Molybdenum">Mo</a>
+          <span class="atwt">95.95</span>
+        </td>
+        <td class="atom transition-metal" title="Technetium">
+          <span class="atno">43</span>
+          <a href="https://en.wikipedia.org/wiki/Technetium">Tc</a>
+          <span class="atwt">(97)</span>
+        </td>
+        <td class="atom transition-metal" title="Ruthenium">
+          <span class="atno">44</span>
+          <a href="https://en.wikipedia.org/wiki/Ruthenium">Ru</a>
+          <span class="atwt">101.07</span>
+        </td>
+        <td class="atom transition-metal" title="Rhodium">
+          <span class="atno">45</span>
+          <a href="https://en.wikipedia.org/wiki/Rhodium">Rh</a>
+          <span class="atwt">102.91</span>
+        </td>
+        <td class="atom transition-metal" title="Palladium">
+          <span class="atno">46</span>
+          <a href="https://en.wikipedia.org/wiki/Palladium">Pd</a>
+          <span class="atwt">106.42</span>
+        </td>
+        <td class="atom transition-metal" title="Silver">
+          <span class="atno">47</span>
+          <a href="https://en.wikipedia.org/wiki/Silver">Ag</a>
+          <span class="atwt">107.87</span>
+        </td>
+        <td class="atom transition-metal" title="Cadmium">
+          <span class="atno">48</span>
+          <a href="https://en.wikipedia.org/wiki/Cadmium">Cd</a>
+          <span class="atwt">112.41</span>
+        </td>
+        <td class="atom metal" title="Indium">
+          <span class="atno">49</span>
+          <a href="https://en.wikipedia.org/wiki/Indium">In</a>
+          <span class="atwt">114.82</span>
+        </td>
+        <td class="atom metal" title="Tin">
+          <span class="atno">50</span>
+          <a href="https://en.wikipedia.org/wiki/Tin">Sn</a>
+          <span class="atwt">118.71</span>
+        </td>
+        <td class="atom metalloid" title="Antimony">
+          <span class="atno">51</span>
+          <a href="https://en.wikipedia.org/wiki/Antimony">Sb</a>
+          <span class="atwt">121.76</span>
+        </td>
+        <td class="atom metalloid" title="Tellurium">
+          <span class="atno">52</span>
+          <a href="https://en.wikipedia.org/wiki/Tellurium">Te</a>
+          <span class="atwt">127.60</span>
+        </td>
+        <td class="atom halogen" title="Iodine">
+          <span class="atno">53</span>
+          <a href="https://en.wikipedia.org/wiki/Iodine">I</a>
+          <span class="atwt">126.90</span>
+        </td>
+        <td class="atom noble-gas" title="Xenon">
+          <span class="atno">54</span>
+          <a href="https://en.wikipedia.org/wiki/Xenon">Xe</a>
+          <span class="atwt">131.29</span>
+        </td>
+        <td><a title="Period 5" href="https://en.wikipedia.org/wiki/Period_5_element">5</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 6" href="https://en.wikipedia.org/wiki/Period_6_element">6</a></td>
+        <td class="atom alkali-metal" title="Caesium">
+          <span class="atno">55</span>
+          <a href="https://en.wikipedia.org/wiki/Caesium">Cs</a>
+          <span class="atwt">132.91</span>
+        </td>
+        <td class="atom alkali-earth" title="Barium">
+          <span class="atno">56</span>
+          <a href="https://en.wikipedia.org/wiki/Barium">Ba</a>
+          <span class="atwt">137.33</span>
+        </td>
+        <td><a title="Lanthanides" href="https://en.wikipedia.org/wiki/Lanthanide">*</a></td>
+        <td class="atom lanthanide" title="Lutetium">
+          <span class="atno">71</span>
+          <a href="https://en.wikipedia.org/wiki/Lutetium">Lu</a>
+          <span class="atwt">174.97</span>
+        </td>
+        <td class="atom transition-metal" title="Hafnium">
+          <span class="atno">72</span>
+          <a href="https://en.wikipedia.org/wiki/Hafnium">Hf</a>
+          <span class="atwt">178.49</span>
+        </td>
+        <td class="atom transition-metal" title="Tantalum">
+          <span class="atno">73</span>
+          <a href="https://en.wikipedia.org/wiki/Tantalum">Ta</a>
+          <span class="atwt">180.95</span>
+        </td>
+        <td class="atom transition-metal" title="Tungsten">
+          <span class="atno">74</span>
+          <a href="https://en.wikipedia.org/wiki/Tungsten">W</a>
+          <span class="atwt">183.84</span>
+        </td>
+        <td class="atom transition-metal" title="Rhenium">
+          <span class="atno">75</span>
+          <a href="https://en.wikipedia.org/wiki/Rhenium">Re</a>
+          <span class="atwt">186.21</span>
+        </td>
+        <td class="atom transition-metal" title="Osmium">
+          <span class="atno">76</span>
+          <a href="https://en.wikipedia.org/wiki/Osmium">Os</a>
+          <span class="atwt">190.23</span>
+        </td>
+        <td class="atom transition-metal" title="Iridium">
+          <span class="atno">77</span>
+          <a href="https://en.wikipedia.org/wiki/Iridium">Ir</a>
+          <span class="atwt">192.22</span>
+        </td>
+        <td class="atom transition-metal" title="Platinum">
+          <span class="atno">78</span>
+          <a href="https://en.wikipedia.org/wiki/Platinum">Pt</a>
+          <span class="atwt">195.08</span>
+        </td>
+        <td class="atom transition-metal" title="Gold">
+          <span class="atno">79</span>
+          <a href="https://en.wikipedia.org/wiki/Gold">Au</a>
+          <span class="atwt">196.97</span>
+        </td>
+        <td class="atom transition-metal" title="Mercury">
+          <span class="atno">80</span>
+          <a href="https://en.wikipedia.org/wiki/Mercury">Hg</a>
+          <span class="atwt">200.59</span>
+        </td>
+        <td class="atom metal" title="Thallium">
+          <span class="atno">81</span>
+          <a href="https://en.wikipedia.org/wiki/Thallium">Tl</a>
+          <span class="atwt">204.38</span>
+        </td>
+        <td class="atom metal" title="Lead">
+          <span class="atno">82</span>
+          <a href="https://en.wikipedia.org/wiki/Lead">Pb</a>
+          <span class="atwt">207.2</span>
+        </td>
+        <td class="atom metal" title="Bismuth">
+          <span class="atno">83</span>
+          <a href="https://en.wikipedia.org/wiki/Bismuth">Bi</a>
+          <span class="atwt">208.98</span>
+        </td>
+        <td class="atom metal" title="Polonium">
+          <span class="atno">84</span>
+          <a href="https://en.wikipedia.org/wiki/Polonium">Po</a>
+          <span class="atwt">(209)</span>
+        </td>
+        <td class="atom halogen" title="Astatine">
+          <span class="atno">85</span>
+          <a href="https://en.wikipedia.org/wiki/Astatine">At</a>
+          <span class="atwt">(210)</span>
+        </td>
+        <td class="atom noble-gas" title="Radon">
+          <span class="atno">86</span>
+          <a href="https://en.wikipedia.org/wiki/Radon">Rn</a>
+          <span class="atwt">(222)</span>
+        </td>
+        <td><a title="Period 6" href="https://en.wikipedia.org/wiki/Period_6_element">6</a></td>
+      </tr>
+      <tr>
+        <td><a title="Period 7" href="https://en.wikipedia.org/wiki/Period_7_element">7</a></td>
+        <td class="atom alkali-metal" title="Francium">
+          <span class="atno">87</span>
+          <a href="https://en.wikipedia.org/wiki/Francium">Fr</a>
+          <span class="atwt">(223)</span>
+        </td>
+        <td class="atom alkali-earth" title="Radium">
+          <span class="atno">88</span>
+          <a href="https://en.wikipedia.org/wiki/Radium">Ra</a>
+          <span class="atwt">(226)</span>
+        </td>
+        <td><a title="Actinides" href="https://en.wikipedia.org/wiki/Actinide">**</a></td>
+        <td class="atom actinide" title="Lawrencium">
+          <span class="atno">103</span>
+          <a href="https://en.wikipedia.org/wiki/Lawrencium">Lr</a>
+          <span class="atwt">(266)</span>
+        </td>
+        <td class="atom transition-metal" title="Rutherfordium">
+          <span class="atno">104</span>
+          <a href="https://en.wikipedia.org/wiki/Rutherfordium">Rf</a>
+          <span class="atwt">(267)</span>
+        </td>
+        <td class="atom transition-metal" title="Dubnium">
+          <span class="atno">105</span>
+          <a href="https://en.wikipedia.org/wiki/Dubnium">Db</a>
+          <span class="atwt">(268)</span>
+        </td>
+        <td class="atom transition-metal" title="Seaborgium">
+          <span class="atno">106</span>
+          <a href="https://en.wikipedia.org/wiki/Seaborgium">Sg</a>
+          <span class="atwt">(269)</span>
+        </td>
+        <td class="atom transition-metal" title="Bohrium">
+          <span class="atno">107</span>
+          <a href="https://en.wikipedia.org/wiki/Bohrium">Bh</a>
+          <span class="atwt">(270)</span>
+        </td>
+        <td class="atom transition-metal" title="Hassium">
+          <span class="atno">108</span>
+          <a href="https://en.wikipedia.org/wiki/Hassium">Hs</a>
+          <span class="atwt">(269)</span>
+        </td>
+        <td class="atom transition-metal" title="Meitnerium">
+          <span class="atno">109</span>
+          <a href="https://en.wikipedia.org/wiki/Meitnerium">Mt</a>
+          <span class="atwt">(278)</span>
+        </td>
+        <td class="atom transition-metal" title="Darmstadtium">
+          <span class="atno">110</span>
+          <a href="https://en.wikipedia.org/wiki/Darmstadtium">Ds</a>
+          <span class="atwt">(281)</span>
+        </td>
+        <td class="atom transition-metal" title="Roentgenium">
+          <span class="atno">111</span>
+          <a href="https://en.wikipedia.org/wiki/Roentgenium">Rg</a>
+          <span class="atwt">(282)</span>
+        </td>
+        <td class="atom transition-metal" title="Copernicium">
+          <span class="atno">112</span>
+          <a href="https://en.wikipedia.org/wiki/Copernicium">Cn</a>
+          <span class="atwt">(285)</span>
+        </td>
+        <td class="atom metal" title="Nihonium">
+          <span class="atno">113</span>
+          <a href="https://en.wikipedia.org/wiki/Nihonium">Nh</a>
+          <span class="atwt">(286)</span>
+        </td>
+        <td class="atom metal" title="Flerovium">
+          <span class="atno">114</span>
+          <a href="https://en.wikipedia.org/wiki/Flerovium">Fl</a>
+          <span class="atwt">(289)</span>
+        </td>
+        <td class="atom metal" title="Moscovium">
+          <span class="atno">115</span>
+          <a href="https://en.wikipedia.org/wiki/Moscovium">Mc</a>
+          <span class="atwt">(290)</span>
+        </td>
+        <td class="atom metal" title="Livermorium">
+          <span class="atno">116</span>
+          <a href="https://en.wikipedia.org/wiki/Livermorium">Lv</a>
+          <span class="atwt">(293)</span>
+        </td>
+        <td class="atom halogen" title="Tennessine">
+          <span class="atno">117</span>
+          <a href="https://en.wikipedia.org/wiki/Tennessine">Ts</a>
+          <span class="atwt">(294)</span>
+        </td>
+        <td class="atom noble-gas" title="Oganesson">
+          <span class="atno">118</span>
+          <a href="https://en.wikipedia.org/wiki/Oganesson">Og</a>
+          <span class="atwt">(294)</span>
+        </td>
+        <td><a title="Period 7" href="https://en.wikipedia.org/wiki/Period_7_element">7</a></td>
+      </tr>
+      <tr>
+        <td colspan="999" style="height: 1rem;"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a title="Lanthanides" href="https://en.wikipedia.org/wiki/Lanthanide">*</a></td>
+        <td class="atom lanthanide" title="Lanthanum">
+          <span class="atno">57</span>
+          <a href="https://en.wikipedia.org/wiki/Lanthanum">La</a>
+          <span class="atwt">138.91</span>
+        </td>
+        <td class="atom lanthanide" title="Cerium">
+          <span class="atno">58</span>
+          <a href="https://en.wikipedia.org/wiki/Cerium">Ce</a>
+          <span class="atwt">140.12</span>
+        </td>
+        <td class="atom lanthanide" title="Praseodymium">
+          <span class="atno">59</span>
+          <a href="https://en.wikipedia.org/wiki/Praseodymium">Pr</a>
+          <span class="atwt">140.91</span>
+        </td>
+        <td class="atom lanthanide" title="Neodymium">
+          <span class="atno">60</span>
+          <a href="https://en.wikipedia.org/wiki/Neodymium">Nd</a>
+          <span class="atwt">144.24</span>
+        </td>
+        <td class="atom lanthanide" title="Promethium">
+          <span class="atno">61</span>
+          <a href="https://en.wikipedia.org/wiki/Promethium">Pm</a>
+          <span class="atwt">(145)</span>
+        </td>
+        <td class="atom lanthanide" title="Samarium">
+          <span class="atno">62</span>
+          <a href="https://en.wikipedia.org/wiki/Samarium">Sm</a>
+          <span class="atwt">150.36</span>
+        </td>
+        <td class="atom lanthanide" title="Europium">
+          <span class="atno">63</span>
+          <a href="https://en.wikipedia.org/wiki/Europium">Eu</a>
+          <span class="atwt">151.96</span>
+        </td>
+        <td class="atom lanthanide" title="Gadolinium">
+          <span class="atno">64</span>
+          <a href="https://en.wikipedia.org/wiki/Gadolinium">Gd</a>
+          <span class="atwt">157.25</span>
+        </td>
+        <td class="atom lanthanide" title="Terbium">
+          <span class="atno">65</span>
+          <a href="https://en.wikipedia.org/wiki/Terbium">Tb</a>
+          <span class="atwt">158.93</span>
+        </td>
+        <td class="atom lanthanide" title="Dysprosium">
+          <span class="atno">66</span>
+          <a href="https://en.wikipedia.org/wiki/Dysprosium">Dy</a>
+          <span class="atwt">162.50</span>
+        </td>
+        <td class="atom lanthanide" title="Holmium">
+          <span class="atno">67</span>
+          <a href="https://en.wikipedia.org/wiki/Holmium">Ho</a>
+          <span class="atwt">164.93</span>
+        </td>
+        <td class="atom lanthanide" title="Erbium">
+          <span class="atno">68</span>
+          <a href="https://en.wikipedia.org/wiki/Erbium">Er</a>
+          <span class="atwt">167.26</span>
+        </td>
+        <td class="atom lanthanide" title="Thulium">
+          <span class="atno">69</span>
+          <a href="https://en.wikipedia.org/wiki/Thulium">Tm</a>
+          <span class="atwt">168.93</span>
+        </td>
+        <td class="atom lanthanide" title="Ytterbium">
+          <span class="atno">70</span>
+          <a href="https://en.wikipedia.org/wiki/Ytterbium">Yb</a>
+          <span class="atwt">173.05</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a title="Actinides" href="https://en.wikipedia.org/wiki/Actinide">**</a></td>
+        <td class="atom actinide" title="Actinium">
+          <span class="atno">89</span>
+          <a href="https://en.wikipedia.org/wiki/Actinium">Ac</a>
+          <span class="atwt">(227)</span>
+        </td>
+        <td class="atom actinide" title="Thorium">
+          <span class="atno">90</span>
+          <a href="https://en.wikipedia.org/wiki/Thorium">Th</a>
+          <span class="atwt">232.04</span>
+        </td>
+        <td class="atom actinide" title="Protactinium">
+          <span class="atno">91</span>
+          <a href="https://en.wikipedia.org/wiki/Protactinium">Pa</a>
+          <span class="atwt">231.04</span>
+        </td>
+        <td class="atom actinide" title="Uranium">
+          <span class="atno">92</span>
+          <a href="https://en.wikipedia.org/wiki/Uranium">U</a>
+          <span class="atwt">238.03</span>
+        </td>
+        <td class="atom actinide" title="Neptunium">
+          <span class="atno">93</span>
+          <a href="https://en.wikipedia.org/wiki/Neptunium">Np</a>
+          <span class="atwt">(237)</span>
+        </td>
+        <td class="atom actinide" title="Plutonium">
+          <span class="atno">94</span>
+          <a href="https://en.wikipedia.org/wiki/Plutonium">Pu</a>
+          <span class="atwt">(244)</span>
+        </td>
+        <td class="atom actinide" title="Americium">
+          <span class="atno">95</span>
+          <a href="https://en.wikipedia.org/wiki/Americium">Am</a>
+          <span class="atwt">(243)</span>
+        </td>
+        <td class="atom actinide" title="Curium">
+          <span class="atno">96</span>
+          <a href="https://en.wikipedia.org/wiki/Curium">Cm</a>
+          <span class="atwt">(247)</span>
+        </td>
+        <td class="atom actinide" title="Berkelium">
+          <span class="atno">97</span>
+          <a href="https://en.wikipedia.org/wiki/Berkelium">Bk</a>
+          <span class="atwt">(247)</span>
+        </td>
+        <td class="atom actinide" title="Californium">
+          <span class="atno">98</span>
+          <a href="https://en.wikipedia.org/wiki/Californium">Cf</a>
+          <span class="atwt">(251)</span>
+        </td>
+        <td class="atom actinide" title="Einsteinium">
+          <span class="atno">99</span>
+          <a href="https://en.wikipedia.org/wiki/Einsteinium">Es</a>
+          <span class="atwt">(252)</span>
+        </td>
+        <td class="atom actinide" title="Fermium">
+          <span class="atno">100</span>
+          <a href="https://en.wikipedia.org/wiki/Fermium">Fm</a>
+          <span class="atwt">(257)</span>
+        </td>
+        <td class="atom actinide" title="Mendelevium">
+          <span class="atno">101</span>
+          <a href="https://en.wikipedia.org/wiki/Mendelevium">Md</a>
+          <span class="atwt">(258)</span>
+        </td>
+        <td class="atom actinide" title="Nobelium">
+          <span class="atno">102</span>
+          <a href="https://en.wikipedia.org/wiki/Nobelium">No</a>
+          <span class="atwt">(259)</span>
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
